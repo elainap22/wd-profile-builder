@@ -1,0 +1,62 @@
+&star_job
+
+  ! build our own model
+    create_initial_model = .true.
+    initial_model_relax_num_steps = 100
+
+  ! this file can be used to specify the composition
+    relax_composition_filename = 'compositions/M1P15_CO_WD.data'
+
+  ! net choice picks which isos are included
+    change_net = .true.
+    new_net_name = 'cno_extras_o18_to_mg26_plus_fe56.net'
+
+  ! save model files
+    save_model_when_terminate = .true.
+    save_model_filename = 'outputs/M1P15_CO_WD.mod'
+
+  ! display on-screen plots
+    pgstar_flag = .true.
+    disable_pgstar_during_relax_flag = .false.
+    pause_before_terminate = .true.
+
+/ ! end of star_job namelist
+
+&eos
+
+/ ! end of eos namelist
+
+&kap
+
+  ! opacities
+    use_type2_opacities = .true.
+    Zbase = 0.02
+
+/ ! end of kap namelist
+
+&controls
+    max_model_number = 4
+  ! starting specifications
+    use_other_build_initial_model = .true.
+    initial_mass = 1.15
+    x_ctrl(1) = 2d8 ! central temperature (K)
+    x_ctrl(2) = 1d-1 ! initial Lcore (Lsun)
+
+  ! turn off burning
+    eps_nuc_factor = 0
+    dxdt_nuc_factor = 0
+
+  ! WD atm choice
+    ! atm_option = 'table'
+    ! atm_table = 'DB_WD_tau_25'
+
+  ! options for energy conservation (see MESA V, Section 3)
+     energy_eqn_option = 'eps_grav'
+     use_gold_tolerances = .false.
+
+     log_center_temp_lower_limit = 7.47712125d0
+    
+    MLT_option = 'none'
+
+
+/ ! end of controls namelist

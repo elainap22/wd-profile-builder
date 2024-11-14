@@ -1,0 +1,5 @@
+Execute the following:
+    python make_compositions.py *initial_mass*
+
+All changes to the structure of the composition file can be made in make_compositions.py; all other changes (temperature, luminosity, etc.)
+can be make in inlist_wd_builder, using either a text editor or shmesa from the command line. 
