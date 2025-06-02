@@ -3,7 +3,10 @@
 
 Initial Setup:
 
-You will need to have shMESA installed to use this repository. See https://github.com/earlbellinger/shmesa.git to install. 
+It is assumed that you already have wd_builder installed and set up. If not, see https://github.com/jschwab/wd_builder.git to install. 
+Copy the contents of this repository into the directory in which wd_builder lives.
+
+You will also need to have shMESA installed to use this repository. See https://github.com/earlbellinger/shmesa.git to install. 
 
 Open the file 'make_compositions.py' and change the update the #PATHNAME in lines 82, 86 & 87. Once
 this is updates to the directory that 'wd-profile-builder' lives in on your machine, all outputs will
