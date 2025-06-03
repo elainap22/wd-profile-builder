@@ -3,7 +3,7 @@
 
 Initial Setup:
 
-It is assumed that you already have wd_builder installed and set up. If not, see https://github.com/jschwab/wd_builder.git to install. 
+It is assumed that you already have wd_builder installed and set up. If not, see https://github.com/MESAHub/mesa-contrib.git to install. 
 Copy the contents of this repository into the directory in which wd_builder lives.
 
 You will also need to have shMESA installed to use this repository. See https://github.com/earlbellinger/shmesa.git to install. 
